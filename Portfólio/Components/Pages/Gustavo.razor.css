@@ -1,0 +1,56 @@
+﻿.brand-card {
+    background: linear-gradient(135deg, #ED2100, #0f172a);
+    border: none;
+    border-radius: 0.5rem;
+}
+
+    .brand-card .card-body {
+        padding: 1rem 1.25rem;
+    }
+
+.timeline {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-left: 0.5rem;
+}
+
+    .timeline:before {
+        content: '';
+        position: absolute;
+        left: 9px;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background: #e9ecef;
+        border-radius: 2px;
+    }
+
+.timeline-item {
+    position: relative;
+    padding: 1rem 1rem 1rem 2.5rem;
+    margin-bottom: 1.25rem;
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -3px;
+    top: 1.25rem;
+    width: 18px;
+    height: 18px;
+    background: #ED2100;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(75,108,183,0.08);
+}
+
+.timeline-content h5 {
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 576px) {
+    .brand-card .card-body {
+        padding: 1rem
+    }
+}
