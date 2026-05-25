@@ -1,0 +1,71 @@
+/* ESTILOS ESPECÍFICOS - NICOLAS */
+
+.pagina-historia {
+    background: #f5f5f5;
+    color: #111111;
+    min-height: 100vh;
+    padding: 2rem 1.5rem 4rem;
+}
+
+.pagina-historia .banner-principal {
+    background: linear-gradient(135deg, #000000, #1a1a1a, #facc15);
+    border-radius: 22px;
+    color: #ffffff;
+    padding: 2.5rem;
+    text-align: center;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+.pagina-historia .titulo-banner {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: clamp(1.8rem, 4vw, 3.2rem);
+    margin: 0;
+}
+
+.pagina-historia .subtitulo-banner {
+    color: #fde68a;
+    margin: 0 0 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.pagina-historia .texto-banner {
+    line-height: 1.6;
+    margin: 1rem auto 0;
+    max-width: 40rem;
+    color: #f3f4f6;
+}
+
+.conteudo-historia {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+/* Responsividade Nicolas */
+@media (max-width: 1100px) {
+    .conteudo-historia {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .pagina-historia {
+        padding: 1rem 1rem 3rem;
+    }
+
+    .pagina-historia .banner-principal {
+        border-radius: 12px;
+        padding: 1.5rem;
+    }
+
+    .pagina-historia .titulo-banner {
+        font-size: 2rem;
+    }
+}
