@@ -5,6 +5,10 @@ html, body {
     scroll-behavior: smooth;
 }
 
+/* ============================================
+   ESTILOS GERAIS - PÁGINA INICIAL
+   ============================================ */
+
 .pagina-inicial {
     background: #f5f5f5;
     color: #111111;
