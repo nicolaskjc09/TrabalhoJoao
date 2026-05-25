@@ -22,8 +22,6 @@ html, body {
     padding: 1.5rem 0 2rem;
 }
 
-
-
 .banner-principal {
     background: linear-gradient(135deg, #000000, #1a1a1a, #facc15);
     border-radius: 22px;
@@ -35,7 +33,7 @@ html, body {
 
 .subtitulo-banner,
 .numero-destaque {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -48,98 +46,100 @@ html, body {
 
 .titulo-banner {
     font-family: "Georgia", "Times New Roman", serif;
-    font-size: clamp(2rem, 4vw, 3.4rem);
+    font-size: clamp(1.8rem, 4vw, 3.2rem);
     margin: 0;
 }
 
 .texto-banner {
-    line-height: 1.7;
+    line-height: 1.6;
     margin: 1rem auto 0;
     max-width: 40rem;
     color: #f3f4f6;
 }
 
-
-
+/* Destaques: grid com 4 colunas em telas grandes */
 .secao-destaques {
     display: grid;
-    gap: 1.2rem;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: start;
+    justify-content: center;
 }
 
+/* Cartões menores e mais compactos */
 .cartao-destaque {
-    border-radius: 18px;
-    padding: 1.8rem;
-    transition: 0.35s ease;
+    border-radius: 12px;
+    padding: 1rem;
+    transition: 0.28s ease;
     position: relative;
     overflow: hidden;
-    border: 1px solid rgba(255,255,255,0.08);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
 }
 
-   
+/* Hover menos agressivo */
+.cartao-destaque:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
 
-    .cartao-destaque:hover {
-        transform: translateY(-8px) scale(1.02);
-        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
-    }
+.cartao-destaque::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 80%;
+    height: 100%;
+    background: rgba(255,255,255,0.06);
+    transform: skewX(-25deg);
+    transition: 0.6s;
+}
 
-    
+.cartao-destaque:hover::before {
+    left: 130%;
+}
 
-    .cartao-destaque::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -120%;
-        width: 80%;
-        height: 100%;
-        background: rgba(255,255,255,0.12);
-        transform: skewX(-25deg);
-        transition: 0.6s;
-    }
-
-    .cartao-destaque:hover::before {
-        left: 130%;
-    }
-
-
-
+/* Paleta ajustada por tipo */
 .cartao-claro {
     background: #ffffff;
-    color: #111111;
+    color: #111827;
 }
-
-
 
 .cartao-escuro {
-    background: linear-gradient(135deg, #111111, #1f1f1f);
-    color: #ffffff;
+    background: linear-gradient(135deg, #0f1724, #111827);
+    color: #e6eef8;
 }
-
-
 
 .cartao-destaque-contato {
-    background: linear-gradient(135deg, #facc15, #fde68a);
-    color: #111111;
+    background: linear-gradient(135deg, #06b6d4, #0ea5a1);
+    color: #042f2e;
 }
 
+/* Número com variações por tipo de cartão */
+.cartao-claro .numero-destaque { color: #6b7280; }
+.cartao-escuro .numero-destaque { color: #60a5fa; }
+.cartao-destaque-contato .numero-destaque { color: #065f46; }
+
 .numero-destaque {
-    color: #eab308;
     display: inline-block;
-    margin-bottom: 1.25rem;
-    font-size: 0.95rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.85rem;
 }
 
 .cartao-destaque h2 {
     font-family: "Georgia", "Times New Roman", serif;
-    font-size: 1.9rem;
-    margin: 0 0 0.9rem;
+    font-size: 1.25rem;
+    margin: 0;
 }
 
 .cartao-destaque p {
-    line-height: 1.7;
-    margin: 0 0 1.5rem;
-    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0 0 0.6rem;
+    font-size: 0.95rem;
+    color: inherit;
 }
 
 .cartao-destaque a {
@@ -147,29 +147,33 @@ html, body {
     font-weight: 700;
     text-decoration: none;
     position: relative;
+    margin-top: auto;
 }
 
-   
+/* Linha de destaque no link */
+.cartao-destaque a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 2px;
+    background: currentColor;
+    transition: 0.25s;
+}
 
-    .cartao-destaque a::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -3px;
-        width: 0%;
-        height: 2px;
-        background: currentColor;
-        transition: 0.3s;
+.cartao-destaque a:hover::after {
+    width: 100%;
+}
+
+/* Responsividade: 2 colunas em telas médias, 1 coluna em pequenas */
+@media (max-width: 1100px) {
+    .secao-destaques {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+}
 
-    .cartao-destaque a:hover::after {
-        width: 100%;
-    }
-
-
-
-@media (max-width: 900px) {
-
+@media (max-width: 700px) {
     .secao-destaques {
         grid-template-columns: 1fr;
     }
@@ -180,14 +184,13 @@ html, body {
 }
 
 @media (max-width: 640px) {
-
     .pagina-inicial {
         padding: 1rem 1rem 3rem;
     }
 
     .banner-principal,
     .cartao-destaque {
-        border-radius: 16px;
+        border-radius: 12px;
     }
 
     .banner-principal {
@@ -195,6 +198,6 @@ html, body {
     }
 
     .titulo-banner {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 }
