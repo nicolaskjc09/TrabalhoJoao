@@ -7,15 +7,15 @@
     padding: 2rem 1.5rem 4rem;
 }
 
-.pagina-historia .banner-principal {
-    background: linear-gradient(135deg, #dc2626, #ef4444, #f87171);
-    border-radius: 22px;
-    color: #ffffff;
-    padding: 2.5rem;
-    text-align: center;
-    box-shadow: 0 12px 35px rgba(220, 38, 38, 0.25);
-    margin-bottom: 1rem;
-}
+    .pagina-historia .banner-principal {
+        background: linear-gradient(135deg, #ED2100, #0f172a);
+        border-radius: 22px;
+        color: #ffffff;
+        padding: 2.5rem;
+        text-align: center;
+        box-shadow: 0 12px 35px rgba(220, 38, 38, 0.25);
+        margin-bottom: 1rem;
+    }
 
 .pagina-historia .titulo-banner {
     font-family: "Georgia", "Times New Roman", serif;
