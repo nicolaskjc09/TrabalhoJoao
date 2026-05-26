@@ -14,6 +14,7 @@
     padding: 2.5rem;
     text-align: center;
     box-shadow: 0 12px 35px rgba(79, 70, 229, 0.25);
+    margin-bottom: 1rem;
 }
 
 .pagina-historia .titulo-banner {
@@ -45,12 +46,15 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
     align-items: start;
     justify-content: center;
-    margin: 0 auto;
-    max-width: 1100px;
+    margin: 3rem auto 0;
+    max-width: 900px;
+    padding: 2rem;
 }
 
 .conteudo-historia .cartao-destaque {
     border: 2px solid #4f46e5;
+    padding: 1.5rem;
+    box-shadow: 0 8px 24px rgba(79, 70, 229, 0.15);
 }
 
 .conteudo-historia .cartao-claro {
@@ -93,5 +97,59 @@
 
     .pagina-historia .titulo-banner {
         font-size: 2rem;
+    }
+}
+
+/* ============================================
+   SEÇÃO DE LINKS DO GRUPO - JOÃO
+   ============================================ */
+
+.secao-links-grupo {
+    margin: 3rem auto 0;
+    max-width: 1100px;
+    text-align: center;
+}
+
+.secao-links-grupo h2 {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 1.8rem;
+    color: #312e81;
+    margin-bottom: 2rem;
+}
+
+.links-grupo {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.link-portafolio {
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    border: 2px solid #312e81;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+}
+
+.link-portafolio:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(79, 70, 229, 0.3);
+    background: linear-gradient(135deg, #7c3aed, #a78bfa);
+}
+
+@media (max-width: 700px) {
+    .links-grupo {
+        grid-template-columns: 1fr;
+    }
+
+    .secao-links-grupo h2 {
+        font-size: 1.4rem;
     }
 }
