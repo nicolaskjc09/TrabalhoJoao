@@ -2,29 +2,30 @@
 
 .pagina-historia {
     background: linear-gradient(135deg, #fef3c7, #fde2e4);
-    color: #78350f;
+    color: #023047;
     min-height: 100vh;
     padding: 2rem 1.5rem 4rem;
 }
 
 .pagina-historia .banner-principal {
-    background: linear-gradient(135deg, #d97706, #f59e0b, #fbbf24);
+    /* azul bebê no banner principal */
+    background: linear-gradient(135deg, #BFEFFF, #89CFF0);
     border-radius: 22px;
-    color: #ffffff;
+    color: #023047;
     padding: 2.5rem;
     text-align: center;
-    box-shadow: 0 12px 35px rgba(217, 119, 6, 0.25);
+    box-shadow: 0 12px 35px rgba(11, 119, 153, 0.12);
 }
 
 .pagina-historia .titulo-banner {
     font-family: "Georgia", "Times New Roman", serif;
     font-size: clamp(1.8rem, 4vw, 3.2rem);
     margin: 0;
-    color: #ffffff;
+    color: #023047;
 }
 
 .pagina-historia .subtitulo-banner {
-    color: #fef3c7;
+    color: #023047;
     margin: 0 0 0.75rem;
     font-size: 0.75rem;
     font-weight: 700;
@@ -36,7 +37,7 @@
     line-height: 1.6;
     margin: 1rem auto 0;
     max-width: 40rem;
-    color: #fef3c7;
+    color: #023047;
 }
 
 .conteudo-historia {
@@ -49,23 +50,55 @@
     max-width: 1100px;
 }
 
+/* Quadros atualizados para azul bebê */
 .conteudo-historia .cartao-destaque {
-    border: 2px solid #d97706;
+    border: 2px solid #89CFF0; /* azul bebê */
 }
 
 .conteudo-historia .cartao-claro {
-    background: #ffffff;
-    color: #78350f;
+    background: #eaf8ff; /* fundo muito claro azul bebê */
+    color: #023047; /* texto escuro para contraste */
 }
 
 .conteudo-historia .cartao-escuro {
-    background: linear-gradient(135deg, #92400e, #d97706);
-    color: #fef3c7;
+    background: linear-gradient(135deg, #89CFF0, #5BB8E6); /* gradiente azul bebê -> azul médio */
+    color: #ffffff;
 }
 
 .conteudo-historia .cartao-destaque-contato {
-    background: linear-gradient(135deg, #f59e0b, #fcd34d);
-    color: #78350f;
+    background: linear-gradient(135deg, #BFEFFF, #89CFF0); /* variação suave de azul bebê */
+    color: #023047;
+}
+
+/* Quadro específico de Meus Projetos */
+.conteudo-historia .cartao-destaque-meus-projetos {
+    background: linear-gradient(180deg, #E6F9FF, #DFF6FF);
+    color: #023047;
+    padding: 1.25rem;
+    border-radius: 14px;
+    border: 2px solid #7ecbe8;
+    box-shadow: 0 8px 20px rgba(11, 119, 153, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+/* Área para links de projetos */
+.projetos-links {
+    margin-top: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.github-link {
+    background: #89CFF0;
+    color: #ffffff;
+    padding: 0.45rem 0.75rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid rgba(255,255,255,0.12);
 }
 
 /* Responsividade Matheus */
